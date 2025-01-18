@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watched List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>My Movie Watched List</h1>
+
+    <div class="form-container">
+        <form id="movieForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            
+            <label for="movieName">Movie Name:</label>
+            <input type="text" id="movieName" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" required>
+
+            <label for="rating">Personal Rating:</label>
+            <input type="number" id="rating" min="1" max="10" required>
+
+            <button type="submit">Add Movie</button>
+        </form>
+    </div>
+
+    <table id="movieTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Movie Name</th>
+                <th>Genre</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Movie entries will go here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
