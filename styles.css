@@ -1,84 +1,75 @@
-
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    color: white;
+    margin: 0;
     padding: 0;
 }
 
-h1 {
+header {
     text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.form-container {
-    margin-bottom: 20px;
+.icon {
+    width: 50px;
+    vertical-align: middle;
 }
 
-label {
+h1 {
     display: inline-block;
-    width: 120px;
-    margin-bottom: 10px;
+    margin: 0 10px;
+    font-size: 24px;
 }
 
-input {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 200px;
+main {
+    padding: 20px;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form input, form button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
     border: none;
-    cursor: pointer;
-    font-size: 14px;
+    outline: none;
 }
 
-button:hover {
-    background-color: #0056b3;
+form button {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
     margin-top: 20px;
+    border-collapse: collapse;
 }
 
-th, td {
-    border: 1px solid #ccc;
+table th, table td {
+    border: 1px solid white;
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
-th {
-    background-color: #f4f4f4;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        margin: 10px;
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
     }
 
-    label {
+    form input, form button {
         width: 100%;
-    }
-
-    input {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    table {
-        font-size: 12px;
-    }
-
-    th, td {
-        padding: 8px;
+        margin: 5px 0;
     }
 }
-
