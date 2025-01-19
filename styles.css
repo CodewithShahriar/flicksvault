@@ -37,13 +37,21 @@ form {
     border-radius: 5px;
 }
 
-form input, form button {
+form input{
     margin: 5px;
     padding: 10px;
+    padding-right: 100px;
     border-radius: 5px;
     border: none;
     outline: none;
 }
+
+form button{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 form button {
     background-color: blue;
@@ -64,12 +72,90 @@ table th, table td {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .icon {
+        width: 40px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
     form {
         flex-direction: column;
+        align-items: stretch;
     }
 
     form input, form button {
         width: 100%;
         margin: 5px 0;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    .movie-picture {
+        width: 100%;
+        max-width: 100px;
+    }
+}
+
+
+
+/* Separate and style the movie table */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* To differentiate the table section */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Smaller table and content */
+table {
+    width: 100%; /* Make the table smaller */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid white;
+    padding: 8px; /* Reduce padding */
+    text-align: center;
+    font-size: 14px; /* Reduce font size */
+}
+
+.movie-picture {
+    width: 80px;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%; /* Ensure the container takes full width on small screens */
+    }
+
+    table {
+        width: 100%; /* Allow the table to use full width on small screens */
+    }
+
+    table th, table td {
+        font-size: 12px; /* Further reduce font size on small screens */
+        padding: 6px; /* Reduce padding for small screens */
+    }
+
+    .movie-picture {
+        width: 60px; /* Smaller picture for small screens */
     }
 }
