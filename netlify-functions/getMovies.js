@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
   }
 
   // MongoDB connection URI (use your own MongoDB connection string)
-  const uri = 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/test?retryWrites=true&w=majority';
+  const uri = 'mongodb+srv://abidshahriar135:zZH7JAIw6qVxf3Wk@cluster0.u9udy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
   try {
     // Connect to MongoDB
