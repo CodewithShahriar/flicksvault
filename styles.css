@@ -37,7 +37,7 @@ form {
     border-radius: 5px;
 }
 
-form input{
+form input {
     margin: 5px;
     padding: 10px;
     padding-right: 100px;
@@ -46,31 +46,44 @@ form input{
     outline: none;
 }
 
-form button{
+form button {
     margin: 5px;
     padding: 10px;
     border-radius: 10px;
-}
-
-
-form button {
     background-color: blue;
     color: white;
     cursor: pointer;
 }
 
+/* Table Container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Table Styling */
 table {
     width: 100%;
-    margin-top: 20px;
+    margin: 0 auto;
     border-collapse: collapse;
 }
 
 table th, table td {
     border: 1px solid white;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
+    font-size: 14px;
 }
 
+.movie-picture {
+    width: 80px;
+    height: auto;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -96,66 +109,35 @@ table th, table td {
         margin: 5px 0;
     }
 
-    table {
-        font-size: 14px;
+    .table-container {
+        width: 100%;
     }
 
     table th, table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .movie-picture {
+        width: 60px;
+    }
+}
+
+/* Additional Mobile Responsiveness for Smaller Screens */
+@media (max-width: 480px) {
+    header {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    form input, form button {
         padding: 8px;
     }
 
     .movie-picture {
-        width: 100%;
-        max-width: 100px;
-    }
-}
-
-
-
-/* Separate and style the movie table */
-.table-container {
-    overflow-x: auto;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* To differentiate the table section */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Smaller table and content */
-table {
-    width: 100%; /* Make the table smaller */
-    margin: 0 auto; /* Center the table */
-    border-collapse: collapse;
-}
-
-table th, table td {
-    border: 1px solid white;
-    padding: 8px; /* Reduce padding */
-    text-align: center;
-    font-size: 14px; /* Reduce font size */
-}
-
-.movie-picture {
-    width: 80px;
-    height: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .table-container {
-        width: 100%; /* Ensure the container takes full width on small screens */
-    }
-
-    table {
-        width: 100%; /* Allow the table to use full width on small screens */
-    }
-
-    table th, table td {
-        font-size: 12px; /* Further reduce font size on small screens */
-        padding: 6px; /* Reduce padding for small screens */
-    }
-
-    .movie-picture {
-        width: 60px; /* Smaller picture for small screens */
+        width: 50px;
     }
 }
