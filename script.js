@@ -70,3 +70,28 @@ tableBody.addEventListener('click', (event) => {
 });
 
 loadMovies();
+
+
+
+// script.js
+document.getElementById("movieForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const movie = {
+        date: document.getElementById("date").value,
+        name: document.getElementById("movieName").value,
+        genre: document.getElementById("genre").value,
+        rating: document.getElementById("rating").value
+    };
+
+    const response = await fetch("/api/add-movie", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(movie)
+    });
+
+    const data = await response.json();
+    alert(data.message);
+});
