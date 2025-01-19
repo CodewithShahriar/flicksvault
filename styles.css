@@ -54,6 +54,10 @@ form button {
     color: white;
     cursor: pointer;
 }
+.edit-btn{
+    color: #ffffff;
+    background-color: #000;
+}
 
 /* Table Container */
 .table-container {
