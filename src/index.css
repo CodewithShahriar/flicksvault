@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 85% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 85% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 0 85% 47%;
+
+    --radius: 0.5rem;
+
+    --gradient-netflix: linear-gradient(180deg, hsl(0, 0%, 8%) 0%, hsl(0, 0%, 3%) 100%);
+    --gradient-card-hover: linear-gradient(180deg, hsla(0, 0%, 100%, 0.1) 0%, hsla(0, 0%, 100%, 0) 100%);
+    --gradient-fade: linear-gradient(180deg, transparent 0%, hsl(0, 0%, 5%) 100%);
+    
+    --shadow-netflix: 0 4px 20px hsla(0, 0%, 0%, 0.8);
+    --shadow-card-hover: 0 8px 40px hsla(0, 0%, 0%, 0.9), 0 0 0 1px hsla(0, 85%, 47%, 0.3);
+    --shadow-red-glow: 0 0 30px hsla(0, 85%, 47%, 0.3);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 85% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 85% 47%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 85% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 85% 47%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 0 85% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Bebas Neue', 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer utilities {
+  .gradient-netflix {
+    background: var(--gradient-netflix);
+  }
+
+  .shadow-netflix {
+    box-shadow: var(--shadow-netflix);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-red-glow {
+    box-shadow: var(--shadow-red-glow);
+  }
+
+  .text-netflix {
+    color: hsl(var(--primary));
+  }
+
+  .bg-netflix {
+    background-color: hsl(var(--primary));
+  }
+
+  .netflix-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: hsl(var(--primary));
+    text-shadow: 
+      0 0 10px hsla(0, 85%, 47%, 0.5),
+      0 2px 4px hsla(0, 0%, 0%, 0.8);
+    line-height: 1;
+  }
+
+  .netflix-card {
+    @apply relative overflow-hidden rounded-md bg-card transition-all duration-300 cursor-pointer;
+  }
+
+  .netflix-card:hover {
+    @apply scale-105 z-10;
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .poster-placeholder {
+    background: linear-gradient(
+      145deg,
+      hsl(0, 0%, 15%) 0%,
+      hsl(0, 0%, 10%) 50%,
+      hsl(0, 0%, 15%) 100%
+    );
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 8%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 25%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 35%);
+}
