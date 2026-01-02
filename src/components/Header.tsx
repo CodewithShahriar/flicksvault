@@ -7,7 +7,7 @@ export function Header() {
         <div className="flex items-center gap-1">
           <Play className="w-7 h-7 text-primary fill-primary" />
           <h1 className="netflix-title text-4xl md:text-5xl">
-            MOVIEVAULT
+            𝔣𝔩𝔦𝔠𝔨𝔰𝔳𝔞𝔲𝔩𝔱
           </h1>
         </div>
         <p className="text-sm text-muted-foreground hidden md:block">
