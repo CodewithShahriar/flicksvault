@@ -46,7 +46,7 @@ const Index = () => {
         <div className="space-y-6">
           <div className="space-y-2">
             <h2 className="text-4xl md:text-5xl font-bold tracking-wider text-foreground">
-              MY COLLECTION
+              𝙼𝚈 𝙲𝙾𝙻𝙻𝙴𝙲𝚃𝙸𝙾𝙽
             </h2>
             <p className="text-muted-foreground">
               Track every movie you watch. Build your ultimate film library.
