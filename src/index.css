@@ -134,9 +134,7 @@
     color: hsl(var(--primary));
   }
 
-  .bg-netflix {
-    background-color: hsl(var(--primary));
-  }
+  
 
   .netflix-title {
     font-family: 'Bebas Neue', sans-serif;
@@ -198,14 +196,7 @@
     box-shadow: var(--shadow-card-hover);
   }
 
-  .poster-placeholder {
-    background: linear-gradient(
-      145deg,
-      hsl(0, 0%, 15%) 0%,
-      hsl(0, 0%, 10%) 50%,
-      hsl(0, 0%, 15%) 100%
-    );
-  }
+  
 }
 
 @keyframes fade-in {
