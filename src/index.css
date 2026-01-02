@@ -96,6 +96,9 @@
 
   body {
     background-color: transparent;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
   }
 
 /* Ensure the React root sits above the background pseudo-elements */
@@ -234,7 +237,7 @@ body::before {
   position: fixed;
   inset: 0;
   /* Use a local image (placed in public/) so Vite serves it at root. */
-  background-image: url('/wallpaper.svg');
+  background-image: url('/wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
