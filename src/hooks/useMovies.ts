@@ -4,7 +4,7 @@ import mockMovies from '@/lib/mockMovies';
 
 const STORAGE_KEY = 'movie-tracker-data';
 
-// Accept optional watchlist lookup: function that returns watchlist ids for a movie
+// change signature to accept optional lookup
 export function useMovies(getMovieWatchlists?: (movieId: string) => string[]) {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -72,18 +72,16 @@ export function useMovies(getMovieWatchlists?: (movieId: string) => string[]) {
     .filter(movie => {
       const matchesSearch = movie.title.toLowerCase().includes(searchQuery.toLowerCase());
 
-      // `all` should exclude movies that are in any watchlist (when lookup provided).
-      if (filter === 'all') {
-        if (getMovieWatchlists) {
-          const inLists = getMovieWatchlists(movie.id).length > 0;
-          if (inLists) return false;
-        }
+      // If filter is "all" and a watchlist lookup is provided, exclude movies that are in any watchlist.
+      if (filter === 'all' && getMovieWatchlists) {
+        const inLists = getMovieWatchlists(movie.id).length > 0;
+        if (inLists) return false;
       }
 
       const matchesFilter =
         filter === 'all' ||
         (filter === 'watched' && movie.watched) ||
-        // If a watchlist lookup is provided, treat 'unwatched' as "show movies in watchlists"
+        // treat 'unwatched' as "show movies in watchlists" when lookup provided
         (filter === 'unwatched' && (getMovieWatchlists ? getMovieWatchlists(movie.id).length > 0 : !movie.watched)) ||
         (filter === 'top-rated' && movie.rating >= 7);
 
