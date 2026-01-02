@@ -149,6 +149,34 @@
     line-height: 1;
   }
 
+  /* Animated per-letter title */
+  .netflix-title .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+    will-change: transform, opacity, filter;
+    animation: title-pop 480ms cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay: calc(var(--i) * 60ms);
+  }
+
+  .netflix-title:hover .char {
+    /* subtle hover bounce for each letter */
+    animation: title-pop-hover 420ms cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay: calc(var(--i) * 40ms);
+  }
+
+  @keyframes title-pop {
+    0% { opacity: 0; transform: translateY(-8px) scale(0.98); filter: blur(1px); }
+    60% { opacity: 1; transform: translateY(2px) scale(1.03); filter: blur(0); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes title-pop-hover {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-6px) scale(1.06); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
   .netflix-card {
     @apply relative overflow-hidden rounded-md bg-card transition-all duration-300 cursor-pointer;
   }
