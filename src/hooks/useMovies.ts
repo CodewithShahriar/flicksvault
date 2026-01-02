@@ -72,17 +72,11 @@ export function useMovies(getMovieWatchlists?: (movieId: string) => string[]) {
     .filter(movie => {
       const matchesSearch = movie.title.toLowerCase().includes(searchQuery.toLowerCase());
 
-      // If filter is "all" and a watchlist lookup is provided, exclude movies that are in any watchlist.
-      if (filter === 'all' && getMovieWatchlists) {
-        const inLists = getMovieWatchlists(movie.id).length > 0;
-        if (inLists) return false;
-      }
-
       const matchesFilter =
-        filter === 'all' ||
+        // "All" now shows only watched movies (excludes watched === false)
+        (filter === 'all' && movie.watched) ||
         (filter === 'watched' && movie.watched) ||
-        // treat 'unwatched' as "show movies in watchlists" when lookup provided
-        (filter === 'unwatched' && (getMovieWatchlists ? getMovieWatchlists(movie.id).length > 0 : !movie.watched)) ||
+        (filter === 'unwatched' && !movie.watched) ||
         (filter === 'top-rated' && movie.rating >= 7);
 
       const matchesGenre = genre === 'all' || movie.genre === genre;
