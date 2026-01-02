@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Movie, FilterType, SortType } from '@/types/movie';
+import { Movie, FilterType, SortType, Genre } from '@/types/movie';
 import mockMovies from '@/lib/mockMovies';
 
 const STORAGE_KEY = 'movie-tracker-data';
@@ -9,6 +9,7 @@ export function useMovies() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState<FilterType>('all');
   const [sortBy, setSortBy] = useState<SortType>('date');
+  const [genre, setGenre] = useState<Genre | 'all'>('all');
 
   // Load movies from localStorage on mount
   useEffect(() => {
@@ -74,7 +75,8 @@ export function useMovies() {
         (filter === 'watched' && movie.watched) ||
         (filter === 'unwatched' && !movie.watched) ||
         (filter === 'top-rated' && movie.rating >= 7);
-      return matchesSearch && matchesFilter;
+      const matchesGenre = genre === 'all' || movie.genre === genre;
+      return matchesSearch && matchesFilter && matchesGenre;
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -113,6 +115,8 @@ export function useMovies() {
     setFilter,
     sortBy,
     setSortBy,
+    genre,
+    setGenre,
     addMovie,
     deleteMovie,
     toggleWatched,

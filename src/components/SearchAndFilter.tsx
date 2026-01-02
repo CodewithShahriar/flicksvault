@@ -7,7 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { FilterType, SortType } from '@/types/movie';
+import { FilterType, SortType, GENRES } from '@/types/movie';
+import { useMovies } from '@/hooks/useMovies';
 
 interface SearchAndFilterProps {
   searchQuery: string;
@@ -16,6 +17,8 @@ interface SearchAndFilterProps {
   onFilterChange: (value: FilterType) => void;
   sortBy: SortType;
   onSortChange: (value: SortType) => void;
+  genre: string | 'all';
+  onGenreChange: (value: string | 'all') => void;
 }
 
 export function SearchAndFilter({
@@ -26,6 +29,20 @@ export function SearchAndFilter({
   sortBy,
   onSortChange,
 }: SearchAndFilterProps) {
+  const {
+    movies,
+    allMovies,
+    stats,
+    searchQuery: query,
+    setSearchQuery,
+    filter: movieFilter,
+    setFilter,
+    sortBy: movieSortBy,
+    setSortBy,
+    genre,
+    setGenre,
+  } = useMovies();
+
   return (
     <div className="flex flex-col sm:flex-row gap-3">
       <div className="relative flex-1">
@@ -59,6 +76,20 @@ export function SearchAndFilter({
             <SelectItem value="date">Newest</SelectItem>
             <SelectItem value="rating">Top Rated</SelectItem>
             <SelectItem value="title">A-Z</SelectItem>
+          </SelectContent>
+        </Select>
+
+        <Select value={genre} onValueChange={(v: string) => onGenreChange(v)}>
+          <SelectTrigger className="w-[140px] bg-secondary border-border/50 h-10">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All genres</SelectItem>
+            {GENRES.map(g => (
+              <SelectItem key={g} value={g}>
+                {g}
+              </SelectItem>
+            ))}
           </SelectContent>
         </Select>
       </div>

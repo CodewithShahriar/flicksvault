@@ -20,6 +20,8 @@ const Index = () => {
     setFilter,
     sortBy,
     setSortBy,
+    genre,
+    setGenre,
     addMovie,
     deleteMovie,
     toggleWatched,
@@ -74,6 +76,8 @@ const Index = () => {
           onFilterChange={setFilter}
           sortBy={sortBy}
           onSortChange={setSortBy}
+          genre={genre}
+          onGenreChange={setGenre}
         />
         
         {/* Movie grid */}
