@@ -298,7 +298,7 @@ export const mockMovies: Movie[] = [
     rating: 5,
     watched: false,
     createdAt: Date.now() - 1000 * 60 * 60 * 24 * 5,
-    posterUrl: 'https://static.wikia.nocookie.net/netflix/images/d/d8/The_Next_365_Days.jpg/revision/latest?cb=20220808180941',
+    posterUrl: 'https://m.media-amazon.com/images/M/MV5BMTg5N2U4ZTItMjc2NC00NDg2LWIzODYtOWZmNzY5Yzc5MzUxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
   },
   {
     id: 'mock-34',
