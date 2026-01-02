@@ -257,7 +257,7 @@ export const mockMovies: Movie[] = [
   },
   {
     id: 'mock-29',
-    title: "Mechanic: Resurrection",
+    title: 'Mechanic: Resurrection',
     genre: 'Action',
     rating: 8,
     watched: false,
@@ -266,14 +266,7 @@ export const mockMovies: Movie[] = [
   },
 ];
 
-localStorage.setItem('movies', JSON.stringify(mockMovies));
-const movies = JSON.parse(localStorage.getItem('movies') ?? '[]') as Movie[];
+const key = 'movie-tracker-data';
+localStorage.removeItem('movie-tracker-data');
 
-function nextId() {
-  const key = 'movieIdCounter';
-  const n = Number(localStorage.getItem(key) ?? 0) + 1;
-  localStorage.setItem(key, String(n));
-  return `movie-${n}`;
-}
-
-export default movies;
+export default mockMovies;
