@@ -11,7 +11,7 @@ export function Header() {
           </h1>
         </div>
         <p className="text-sm text-muted-foreground hidden md:block">
-          Your Personal Movie Collection
+          Abid's Personal Movie Collection
         </p>
       </div>
     </header>
