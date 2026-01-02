@@ -11,6 +11,15 @@ import { useWatchlists } from '@/hooks/useWatchlists';
 
 const Index = () => {
   const {
+    watchlists,
+    addWatchlist,
+    deleteWatchlist,
+    getMovieWatchlists,
+    getMoviesInWatchlist,
+    toggleMovieInWatchlist,
+  } = useWatchlists();
+
+  const {
     movies,
     allMovies,
     stats,
@@ -28,16 +37,7 @@ const Index = () => {
     editMovie,
     getWatchedMoviesByGenre,
     watchedGenres,
-  } = useMovies();
-
-  const {
-    watchlists,
-    addWatchlist,
-    deleteWatchlist,
-    getMovieWatchlists,
-    getMoviesInWatchlist,
-    toggleMovieInWatchlist,
-  } = useWatchlists();
+  } = useMovies(getMovieWatchlists);
 
   return (
     <div className="min-h-screen">
@@ -77,7 +77,7 @@ const Index = () => {
           sortBy={sortBy}
           onSortChange={setSortBy}
           genre={genre}
-          onGenreChange={setGenre}
+          onGenreChange={(value: string) => setGenre(value as typeof genre)}
         />
         
         {/* Movie grid */}
