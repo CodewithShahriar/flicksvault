@@ -89,6 +89,21 @@
     min-height: 100vh;
   }
 
+  /* Put the solid fallback color on html so body can be transparent over the image */
+  html {
+    background-color: hsl(var(--background));
+  }
+
+  body {
+    background-color: transparent;
+  }
+
+/* Ensure the React root sits above the background pseudo-elements */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
   h1, h2, h3 {
     font-family: 'Bebas Neue', 'Inter', sans-serif;
     letter-spacing: 0.05em;
@@ -218,13 +233,14 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg?semt=ais_hybrid&w=740&q=80");
+  /* Use a local image to avoid hotlink/blocking issues. */
+  background-image: url('/wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(6px) brightness(0.6);
+  filter: blur(4px) brightness(0.75);
   transform: scale(1.02);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   will-change: transform, filter;
 }
@@ -235,6 +251,6 @@ body::after {
   position: fixed;
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.5));
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
