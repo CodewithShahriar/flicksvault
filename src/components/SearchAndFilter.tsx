@@ -28,6 +28,8 @@ export function SearchAndFilter({
   onFilterChange,
   sortBy,
   onSortChange,
+  genre,
+  onGenreChange,
 }: SearchAndFilterProps) {
   const {
     movies,
@@ -39,7 +41,7 @@ export function SearchAndFilter({
     setFilter,
     sortBy: movieSortBy,
     setSortBy,
-    genre,
+    genre: hookGenre,
     setGenre,
   } = useMovies();
 
