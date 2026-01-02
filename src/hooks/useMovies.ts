@@ -15,9 +15,16 @@ export function useMovies() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       try {
-        setMovies(JSON.parse(stored));
+        const parsed = JSON.parse(stored) as Movie[];
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setMovies(parsed);
+        } else {
+          // stored is an empty array or invalid shape — seed mock data
+          setMovies(mockMovies);
+        }
       } catch (e) {
         console.error('Failed to parse stored movies:', e);
+        setMovies(mockMovies);
       }
     } else {
       // If no stored data, seed with mock movies for first-time use
