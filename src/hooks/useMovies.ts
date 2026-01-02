@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Movie, FilterType, SortType } from '@/types/movie';
+import mockMovies from '@/lib/mockMovies';
 
 const STORAGE_KEY = 'movie-tracker-data';
 
@@ -18,6 +19,9 @@ export function useMovies() {
       } catch (e) {
         console.error('Failed to parse stored movies:', e);
       }
+    } else {
+      // If no stored data, seed with mock movies for first-time use
+      setMovies(mockMovies);
     }
   }, []);
 
