@@ -257,13 +257,23 @@ export const mockMovies: Movie[] = [
   },
   {
     id: 'mock-29',
-    title: "Wrath of Man",
+    title: "Mechanic: Resurrection",
     genre: 'Action',
     rating: 8,
     watched: false,
-    createdAt: Date.now() - 1000 * 60 * 60 * 5,
-    posterUrl: 'https://m.media-amazon.com/images/M/MV5BODE4ZGY4OTktNDBjMy00NGVkLTk5YWUtNjA3NGU3MTA5NzM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+    createdAt: Date.now() - 1000 * 60 * 60 * 4,
+    posterUrl: 'https://4.bp.blogspot.com/-xqWmtXxPPDk/WPpfXQqH9lI/AAAAAAAAAG8/nX0ATjcaag8QxW7GIs9k1wU2zdEIPDBgQCLcB/s1600/Mechanic-Resurrection-2016.jpg',
   },
 ];
 
-export default mockMovies;
+localStorage.setItem('movies', JSON.stringify(mockMovies));
+const movies = JSON.parse(localStorage.getItem('movies') ?? '[]') as Movie[];
+
+function nextId() {
+  const key = 'movieIdCounter';
+  const n = Number(localStorage.getItem(key) ?? 0) + 1;
+  localStorage.setItem(key, String(n));
+  return `movie-${n}`;
+}
+
+export default movies;
