@@ -180,7 +180,7 @@ export function AddMovieForm({ onAdd }: AddMovieFormProps) {
               </Label>
               <div className="relative">
                 {posterPreview ? (
-                  <div className="relative aspect-[2/3] rounded-lg overflow-hidden border border-border/50">
+                  <div className="relative aspect-[3/4] max-h-52 rounded-lg overflow-hidden border border-border/50">
                     <img
                       src={posterPreview}
                       alt="Poster preview"
@@ -198,7 +198,7 @@ export function AddMovieForm({ onAdd }: AddMovieFormProps) {
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="w-full aspect-[2/3] rounded-lg border-2 border-dashed border-border/50 hover:border-primary/50 transition-colors flex flex-col items-center justify-center gap-3 bg-secondary/30"
+                    className="w-full aspect-[3/4] max-h-52 rounded-lg border-2 border-dashed border-border/50 hover:border-primary/50 transition-colors flex flex-col items-center justify-center gap-3 bg-secondary/30"
                   >
                     <ImagePlus className="w-10 h-10 text-muted-foreground" />
                     <span className="text-sm text-muted-foreground">
