@@ -85,6 +85,8 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+    position: relative;
+    min-height: 100vh;
   }
 
   h1, h2, h3 {
@@ -209,4 +211,30 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(0, 0%, 35%);
+}
+
+/* Full-page blurred background image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.02);
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, filter;
+}
+
+/* Optional subtle overlay to improve text contrast */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.5));
+  z-index: -1;
+  pointer-events: none;
 }
