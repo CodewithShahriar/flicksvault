@@ -150,19 +150,23 @@
   }
 
   /* Animated per-letter title */
+
   .netflix-title .char {
     display: inline-block;
     opacity: 0;
     transform: translateY(-8px) scale(0.98);
     will-change: transform, opacity, filter;
-    animation: title-pop 480ms cubic-bezier(.2,.8,.2,1) forwards;
-    animation-delay: calc(var(--i) * 60ms);
+    /* Run a one-shot pop, then start a looping wave animation staggered by --i */
+    animation: 
+      title-pop 480ms cubic-bezier(.2,.8,.2,1) forwards,
+      title-wave 2400ms ease-in-out calc(480ms + var(--i) * 80ms) infinite;
   }
 
+  /* Keep a slightly stronger wave while hovering */
   .netflix-title:hover .char {
-    /* subtle hover bounce for each letter */
-    animation: title-pop-hover 420ms cubic-bezier(.2,.8,.2,1) forwards;
-    animation-delay: calc(var(--i) * 40ms);
+    animation: 
+      title-pop 480ms cubic-bezier(.2,.8,.2,1) forwards,
+      title-wave 1200ms ease-in-out calc(480ms + var(--i) * 40ms) infinite;
   }
 
   @keyframes title-pop {
@@ -174,6 +178,14 @@
   @keyframes title-pop-hover {
     0% { transform: translateY(0) scale(1); }
     50% { transform: translateY(-6px) scale(1.06); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  @keyframes title-wave {
+    0% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-4px) scale(1.02); }
+    50% { transform: translateY(0) scale(1); }
+    75% { transform: translateY(4px) scale(0.99); }
     100% { transform: translateY(0) scale(1); }
   }
 
