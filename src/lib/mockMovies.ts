@@ -493,6 +493,18 @@ export const mockMovies: Movie[] = [
 },
 
 
+{
+  id: 'mock-55',
+  title: 'No Strings Attached',
+  genre: 'Romance',
+  rating: 5,
+  watched: true,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMKnNXTiTrUZ61q_kwSxgwjCuYsVpnX_m9oCfmMBQbzciuEtvh1nYjkq_zce56IAyrbezBbg&s=10',
+},
+
+
+
 ];
 
 const key = 'movie-tracker-data';
