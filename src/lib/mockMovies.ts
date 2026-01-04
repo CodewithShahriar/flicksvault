@@ -514,6 +514,18 @@ export const mockMovies: Movie[] = [
 },
 
 
+{
+  id: 'mock-57',
+  title: 'Shutter Island',
+  genre: 'Thriller',
+  rating: 7,
+  watched: true,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWaASGt5HkTiOySkGsHTkXv4l_SCqlgCdpiCMbai76YykQMsJNGbobjcea6jWH-wvqVE9XGw&s=10',
+},
+
+
+
 
 
 ];
