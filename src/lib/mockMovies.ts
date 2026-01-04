@@ -482,6 +482,17 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://m.media-amazon.com/images/M/MV5BMWNjNDRjYTctYmMxMS00Y2MzLWI4YjUtYTBhNjRiMWMwMDkxXkEyXkFqcGc@._V1_.jpg',
 },
 
+{
+  id: 'mock-54',
+  title: '777 Charlie',
+  genre: 'Adventure',
+  rating: 5,
+  watched: true,
+  createdAt: Date.now(),
+  posterUrl: 'https://m.media-amazon.com/images/M/MV5BOWY4MzlmNjItZGYzMS00ZDVhLWI2ZDMtNWEwZTBiMmU0YzQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+},
+
+
 ];
 
 const key = 'movie-tracker-data';
