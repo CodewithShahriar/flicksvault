@@ -503,6 +503,17 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMKnNXTiTrUZ61q_kwSxgwjCuYsVpnX_m9oCfmMBQbzciuEtvh1nYjkq_zce56IAyrbezBbg&s=10',
 },
 
+{
+  id: 'mock-56',
+  title: 'Anora',
+  genre: 'Romance',
+  rating: 0,
+  watched: false, // watchlist
+  createdAt: Date.now(),
+  posterUrl: 'https://m.media-amazon.com/images/M/MV5BYThiN2M0NTItODRmNC00NDhlLWFiYTgtMWM2YTEyYzI3ZTY1XkEyXkFqcGc@._V1_.jpg',
+},
+
+
 
 
 ];
