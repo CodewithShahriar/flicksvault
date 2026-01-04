@@ -462,6 +462,26 @@ export const mockMovies: Movie[] = [
     createdAt: Date.now() - 1000 * 60 * 60 * 24 * 17,
     posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSogFPfZcNeyQCqhuKGazDuG3e2rrEeBYXzD7vrxG9nTOpLc61LvqDNTysiJEJOd7QFQwPv&s=10',
   },
+  {
+    id: 'mock-52',
+    title: 'Lone Survivor',
+    genre: 'War',
+    rating: 0,
+    watched: false,
+    createdAt: Date.now() - 1000 * 60 * 60 * 24 * 18,
+    posterUrl: 'https://image.tmdb.org/t/p/w185/8ST6iVp3fkUSbCNPzEOyqvuwjH5.jpg',
+  },
+
+  {
+  id: 'mock-53',
+  title: 'Eko',
+  genre: 'Adventure',
+  rating: 0,
+  watched: false, // watchlist
+  createdAt: Date.now(),
+  posterUrl: 'https://m.media-amazon.com/images/M/MV5BMWNjNDRjYTctYmMxMS00Y2MzLWI4YjUtYTBhNjRiMWMwMDkxXkEyXkFqcGc@._V1_.jpg',
+},
+
 ];
 
 const key = 'movie-tracker-data';
