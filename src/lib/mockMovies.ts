@@ -556,6 +556,18 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9341404_p_v12_aa.jpg',
 },
 
+  {
+  id: 'mock-61',
+  title: 'Newness',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAAWsfKj1lYnhG4ouaPceg5wslOB0sX86f_YSWSqZU8M-iLp5_rm99oyyFBxUG9Zp78Y_&s=10',
+},
+
+
+ 
 
 
 
