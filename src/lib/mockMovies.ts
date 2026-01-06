@@ -535,6 +535,17 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/68/The_Best_of_Me_poster.jpg/250px-The_Best_of_Me_poster.jpg',
 },
 
+  {
+  id: 'mock-59',
+  title: 'The Theory of Everything',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://i0.wp.com/www.blackfilm.com/read/wp-content/uploads/2014/10/The-Theory-of-Everything-Poster-2.jpg',
+},
+
+
 
 
 
