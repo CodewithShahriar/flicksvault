@@ -587,6 +587,36 @@ export const mockMovies: Movie[] = [
 },
 
 
+{
+  id: 'mock-64',
+  title: 'The Berlin File',
+  genre: 'Action',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf3BDgyoOIvJH9X2w0Xgvw04T8HioOaSxZaQ&s',
+},
+{
+  id: 'mock-65',
+  title: 'The Outlaws',
+  genre: 'Action',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTk0T1rWshlnUHicYARkuy5ql806UHr-yzKg&s',
+},
+{
+  id: 'mock-66',
+  title: 'The Wild Goose Lake',
+  genre: 'Crime',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://images.mubicdn.net/images/artworks/156455/cache-156455-1621558324/images-original.png',
+},
+
+
+
 
 
 
