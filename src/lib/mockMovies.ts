@@ -576,7 +576,16 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://resizing.flixster.com/G_2dxI4ZkWCYV46UJNdspEVFVSs=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEwOGZjMGY0LWIxNzEtNGM5OC05NjU4LWMzOGRiMGI1NTE0ZS53ZWJw',
 },
 
- 
+ {
+  id: 'mock-63',
+  title: 'Amar (2017)',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoK0_r7jETgLRV0YlomWTIn_HX7CEfS8tc9dbAEF-dD9o8-t_B3SkwAdXmKwBo5ZDZztldg&s=10',
+},
+
 
 
 
