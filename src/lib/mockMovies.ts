@@ -566,6 +566,15 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAAWsfKj1lYnhG4ouaPceg5wslOB0sX86f_YSWSqZU8M-iLp5_rm99oyyFBxUG9Zp78Y_&s=10',
 },
 
+ {
+  id: 'mock-62',
+  title: '7:20 Once a Week',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://resizing.flixster.com/G_2dxI4ZkWCYV46UJNdspEVFVSs=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEwOGZjMGY0LWIxNzEtNGM5OC05NjU4LWMzOGRiMGI1NTE0ZS53ZWJw',
+},
 
  
 
