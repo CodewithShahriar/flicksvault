@@ -525,6 +525,18 @@ export const mockMovies: Movie[] = [
 },
 
 
+  {
+  id: 'mock-58',
+  title: 'The Best of Me',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/68/The_Best_of_Me_poster.jpg/250px-The_Best_of_Me_poster.jpg',
+},
+
+
+
 
 
 
