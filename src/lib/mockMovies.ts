@@ -646,6 +646,15 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNS7th8eTYZWYl08jXLFbFRlzeGWjmmbIcLsNwgNeC1zgWbTXZMGrx19hxiLte3MWfpeTc&s=10',
 },
 
+{
+  id: 'mock-70',
+  title: 'Saiyaara',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://resizing.flixster.com/pQxq8dOYOTjEMRZPNYlpTc2mKgc=/fit-in/705x460/v2/https://resizing.flixster.com/TLczGj4_vAPGQlT2iC4tyc0EL6w=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzdjYzEyMGYyLTE2OGMtNDI0Zi1hYWJlLTY4MzcxZjMwYzNhNS5qcGc=',
+},
 
 
 
