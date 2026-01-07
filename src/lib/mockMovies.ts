@@ -616,6 +616,26 @@ export const mockMovies: Movie[] = [
 },
 
 
+{
+  id: 'mock-67',
+  title: 'Gangster: A Love Story',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_8AI9zmxurEBgEbgQSH4MT7Qj530L68q6XGBYCpwTcRCDsocNMlJNpxaUhRcLdwLt_5_waA&s=10',
+},
+{
+  id: 'mock-68',
+  title: 'Coolie',
+  genre: 'Action',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO0PqJ_phnH7lVfclfrwWI19tpKu0afR67Tq_zId___cjLuf9Aj-WutU04obR2dPa6bpNupg&s=10',
+},
+
+
 
 
 
