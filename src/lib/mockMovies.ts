@@ -667,6 +667,15 @@ export const mockMovies: Movie[] = [
   posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJtYIykV1RVI43AY5Nh4pE73KRjFmTXZa58hq9O4cdS7qlZSsoAg3TVabm6nfYSIkSHT1yEA&s=10',
 },
 
+{
+  id: 'mock-72',
+  title: 'Masaan',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh2vGe0DYZQuALyPxD6LQUfD-UwzJgyAdhtr-sR0kJIkbKBFbaFgnel_AbBBhAYZnoUxEx&s=10',
+},
 
 
 
