@@ -657,6 +657,15 @@ export const mockMovies: Movie[] = [
 },
 
 
+{
+  id: 'mock-71',
+  title: 'Rustom',
+  genre: 'Crime',
+  rating: 6,
+  watched: true,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJtYIykV1RVI43AY5Nh4pE73KRjFmTXZa58hq9O4cdS7qlZSsoAg3TVabm6nfYSIkSHT1yEA&s=10',
+},
 
 
 
