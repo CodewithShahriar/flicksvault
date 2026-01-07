@@ -636,6 +636,17 @@ export const mockMovies: Movie[] = [
 },
 
 
+{
+  id: 'mock-69',
+  title: 'Satyaprem Ki Katha',
+  genre: 'Romance',
+  rating: 0,
+  watched: false,
+  createdAt: Date.now(),
+  posterUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNS7th8eTYZWYl08jXLFbFRlzeGWjmmbIcLsNwgNeC1zgWbTXZMGrx19hxiLte3MWfpeTc&s=10',
+},
+
+
 
 
 
